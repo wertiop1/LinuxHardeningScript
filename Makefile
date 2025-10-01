@@ -13,7 +13,7 @@ clean:
 	rm -f *.db
 
 $(TARGET): $(OBJ)
-	gcc -o $@ %?
+	gcc-15 -o $@ $?
 
 obj/%.o: src/%.c 
-	gcc -o $< -o $@ -Iinclude
+	gcc-15 -c $< -o $@ -Iinclude
